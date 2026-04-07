@@ -1,0 +1,289 @@
+/* Landing Page Styles */
+
+:root {
+  --primary-color: #0066cc;
+  --primary-hover: #0052a3;
+  --text-primary: #1a1a1a;
+  --text-secondary: #666666;
+  --border-color: #e0e0e0;
+  --bg-light: #f9f9f9;
+  --bg-card: #ffffff;
+  --shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 4px 16px rgba(0, 0, 0, 0.15);
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-2xl: 4rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-primary: #f0f0f0;
+    --text-secondary: #b0b0b0;
+    --border-color: #404040;
+    --bg-light: #1a1a1a;
+    --bg-card: #262626;
+  }
+}
+
+/* Landing Page Container */
+.landing-page {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sections */
+.section {
+  width: 100%;
+  padding: var(--spacing-2xl) var(--spacing-lg);
+  margin: 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--text-primary);
+}
+
+.section-header p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* Benefits Section */
+.benefits-section {
+  background-color: var(--bg-light);
+}
+
+.benefits-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  gap: var(--spacing-2xl);
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.benefits-image {
+  flex: 1;
+  min-width: 300px;
+  height: 350px;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.benefits-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.benefits-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.benefits-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--text-primary);
+}
+
+.benefits-content p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+/* Products Section */
+.products-section {
+  background-color: var(--bg-card);
+}
+
+.products-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.product-card {
+  background-color: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.product-image {
+  width: 100%;
+  height: 200px;
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 var(--spacing-sm) 0;
+  color: var(--text-primary);
+}
+
+.product-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin: 0 0 var(--spacing-md) 0;
+  flex-grow: 1;
+  line-height: 1.5;
+}
+
+/* API Section */
+.api-section {
+  background-color: var(--bg-light);
+}
+
+.examples-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.api-example {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: var(--spacing-lg);
+}
+
+.api-example h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0 0 var(--spacing-md) 0;
+  color: var(--text-primary);
+}
+
+.api-example pre {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: var(--spacing-md);
+  border-radius: 4px;
+  overflow-x: auto;
+  margin: 0;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.api-example code {
+  color: inherit;
+}
+
+/* Buttons */
+.cta-button,
+.card-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover,
+.card-button:hover {
+  background-color: var(--primary-hover);
+}
+
+.cta-button {
+  padding: var(--spacing-md) var(--spacing-xl);
+  font-size: 1.05rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .benefits-container {
+    flex-direction: column;
+    gap: var(--spacing-lg);
+  }
+
+  .benefits-image {
+    min-width: 100%;
+    height: 250px;
+  }
+
+  .benefits-content {
+    min-width: 100%;
+  }
+
+  .products-grid,
+  .examples-container {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+}
+
+@media (max-width: 1024px) {
+  .products-grid,
+  .examples-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: var(--spacing-lg) var(--spacing-sm);
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .benefits-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .products-grid,
+  .examples-container {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,90 @@
+{{ define "main" }}
+<div class="landing-page">
+    <!-- Section 1: Benefits Card -->
+    <section class="section benefits-section">
+        <div class="benefits-container">
+            <div class="benefits-image">
+                <img src="/images/firewatch-placeholder.svg" alt="Benefits Hero" class="hero-image">
+            </div>
+            <div class="benefits-content">
+                <h2>Why Choose Us</h2>
+                <p>Discover the power of our platform designed to transform your workflow and maximize productivity.</p>
+                <button class="cta-button">Get Started</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Three Products -->
+    <section class="section products-section">
+        <div class="section-header">
+            <h2>Our Products</h2>
+            <p>Three powerful solutions for every need</p>
+        </div>
+        <div class="products-grid">
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="/images/product-1.svg" alt="Product 1">
+                </div>
+                <h3>Product One</h3>
+                <p>A powerful solution for managing your core workflows efficiently and effectively.</p>
+                <button class="card-button">Learn More</button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="/images/product-2.svg" alt="Product 2">
+                </div>
+                <h3>Product Two</h3>
+                <p>Advanced features designed to scale with your business as it grows and evolves.</p>
+                <button class="card-button">Learn More</button>
+            </article>
+
+            <article class="product-card">
+                <div class="product-image">
+                    <img src="/images/product-3.svg" alt="Product 3">
+                </div>
+                <h3>Product Three</h3>
+                <p>Comprehensive analytics and insights to drive better decision-making every day.</p>
+                <button class="card-button">Learn More</button>
+            </article>
+        </div>
+    </section>
+
+    <!-- Section 3: API Examples -->
+    <section class="section api-section">
+        <div class="section-header">
+            <h2>API Usage Examples</h2>
+            <p>Get started with our simple API in minutes</p>
+        </div>
+
+        <div class="examples-container">
+            <article class="api-example">
+                <h3>Authentication</h3>
+                <pre><code>curl -X POST https://api.example.com/auth \
+  -H "Content-Type: application/json" \
+  -d '{
+    "username": "user@example.com",
+    "password": "your_password"
+  }'</code></pre>
+            </article>
+
+            <article class="api-example">
+                <h3>Fetch Data</h3>
+                <pre><code>curl -X GET https://api.example.com/data \
+  -H "Authorization: Bearer YOUR_TOKEN"</code></pre>
+            </article>
+
+            <article class="api-example">
+                <h3>Create Resource</h3>
+                <pre><code>curl -X POST https://api.example.com/resources \
+  -H "Authorization: Bearer YOUR_TOKEN" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "New Resource",
+    "type": "example"
+  }'</code></pre>
+            </article>
+        </div>
+    </section>
+</div>
+{{ end }}
